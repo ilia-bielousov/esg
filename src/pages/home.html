@@ -1,0 +1,138 @@
+<!-- src/pages/home.html -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Главная | ESG Construction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./../scss/main.scss" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header-placeholder></header-placeholder>
+
+  <main class="home">
+    <!-- Hero -->
+    <section class="home__hero">
+      <div class="home__hero-bg"></div>
+      <div class="container home__hero-content">
+        <h1 class="home__hero-title">ESG Construction</h1>
+        <p class="home__hero-text">
+          This is a team of professionals with many years of experience in construction and design.
+          We position ourselves not just as a construction company, but as a group of companies,
+          professionals, and like‑minded people.
+        </p>
+        <div class="home__hero-meta">
+          <span class="home__hero-tag">Price from 10 mln $</span>
+          <span class="home__hero-tag">16 Projects</span>
+          <span class="home__hero-tag">Best Investment</span>
+        </div>
+        <a href="/contacts.html" class="home__hero-btn">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- Invest Section -->
+    <section class="home__invest">
+      <div class="container">
+        <h2 class="home__invest-title">Invest with us</h2>
+        <p class="home__invest-subtitle">
+          With us, you will be protected from market fluctuations and receive high‑quality investment services.
+        </p>
+
+        <div class="home__invest-stats">
+          <div class="home__invest-stat">
+            <span class="home__invest-label">High profitability</span>
+            <span class="home__invest-value">~23 – 27%</span>
+          </div>
+          <div class="home__invest-stat">
+            <span class="home__invest-label">Ready Projects</span>
+            <span class="home__invest-value">16+</span>
+          </div>
+          <div class="home__invest-stat">
+            <span class="home__invest-label">Quality assurance</span>
+            <span class="home__invest-value">ISO 9001</span>
+          </div>
+          <div class="home__invest-stat">
+            <span class="home__invest-label">Satisfied Customers</span>
+            <span class="home__invest-value">15 344</span>
+          </div>
+          <div class="home__invest-stat">
+            <span class="home__invest-label">Company growth</span>
+            <span class="home__invest-value">+17% <span class="up-arrow">↑</span></span>
+          </div>
+          <div class="home__invest-stat">
+            <span class="home__invest-label">Projects planned</span>
+            <span class="home__invest-value">54+</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="home__projects">
+      <div class="container">
+        <h2 class="home__projects-title">Our Projects</h2>
+        <ul class="home__projects-filters">
+          <li><button class="home__projects-filter home__projects-filter--active" data-filter="all">All</button></li>
+          <li><button class="home__projects-filter" data-filter="building">Building</button></li>
+          <li><button class="home__projects-filter" data-filter="ready">Ready</button></li>
+          <li><button class="home__projects-filter" data-filter="planned">Planned</button></li>
+        </ul>
+        <ul class="home__projects-list">
+          <li class="home__projects-item">
+            <img src="/assets/images/proj1.jpg" alt="Beloostrov Nordic" />
+            <h3 class="home__projects-name">Beloostrov Nordic</h3>
+          </li>
+          <li class="home__projects-item">
+            <img src="/assets/images/proj2.jpg" alt="Zelenogorsk Half-timbered" />
+            <h3 class="home__projects-name">Zelenogorsk Half‑timbered</h3>
+          </li>
+          <li class="home__projects-item">
+            <img src="/assets/images/proj3.jpg" alt="Brus Sea Fortress" />
+            <h3 class="home__projects-name">Brus Sea Fortress</h3>
+          </li>
+          <li class="home__projects-item">
+            <img src="/assets/images/proj4.jpg" alt="Sestroretsk Nordic" />
+            <h3 class="home__projects-name">Sestroretsk Nordic</h3>
+          </li>
+          <li class="home__projects-item">
+            <img src="/assets/images/proj5.jpg" alt="Lada Granta Park" />
+            <h3 class="home__projects-name">Lada Granta Park</h3>
+          </li>
+          <li class="home__projects-item">
+            <img src="/assets/images/proj6.jpg" alt="Burisa De Canion" />
+            <h3 class="home__projects-name">Burisa De Canion</h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section class="home__promo">
+      <div class="container home__promo-content">
+        <div class="home__promo-text">
+          <h2 class="home__promo-title">Investing with us is profitable and safe</h2>
+          <p class="home__promo-desc">
+            In the future, we provide comfort and aesthetic appeal through renovation.
+            Learn about our services and security, as well as our effective management
+            of profitable properties.
+          </p>
+          <a href="/services.html" class="home__promo-btn">See more ›</a>
+        </div>
+        <div class="home__promo-media">
+          <img src="/assets/images/logo.svg" alt="ESG Construction Logo" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer-placeholder></footer-placeholder>
+
+  <script type="module" src="./../js/includeHeader.js"></script>
+  <script type="module" src="./../js/includeFooter.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("_container.scss");
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0; // убираем default‑отступы
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+@import url("_blog.scss");
+@import url("_vacancies.scss");
+@import url("_contacts.scss");
+@import url("_services.scss");
+@import url("_invest.scss");
+@import url("_about.scss");
+@import url("_projects.scss");
+@import url("_architec.scss");
+@import url("_home.scss");

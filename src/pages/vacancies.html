@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вакансии | ESG Construction</title>
+  <!-- Основные стили -->
+  <link rel="stylesheet" href="./../scss/main.scss" />
+</head>
+
+<body>
+
+  <header-placeholder></header-placeholder>
+
+  <main class="vacancies">
+    <div class="container vacancies__container">
+      <h1 class="vacancies__title">Вакансии</h1>
+      <p class="vacancies__subtitle">
+        Хотите стать частью команды?<br />
+        Присоединяйтесь и развивайтесь вместе с нами!
+      </p>
+      <div class="vacancies__content">
+        <!-- Список вакансий -->
+        <ul id="vacanciesList" class="vacancies__list"></ul>
+
+        <!-- Детали выбранной вакансии -->
+        <div id="vacanciesDetails" class="vacancies__details">
+          <p class="vacancies__details-placeholder">
+            Выберите вакансию, чтобы увидеть подробности
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer-placeholder></footer-placeholder>
+
+  <script type="module" src="./../js/includeHeader.js"></script>
+  <script type="module" src="./../js/includeFooter.js"></script>
+  <script type="module" src="./../js/vacancies.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+.design {
+  padding: 20px;
+  text-align: center;
+  background: #f9f1e7;
+
+  &__title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    font-size: 1.1em;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 20px;
+  }
+
+  &__services,
+  &__process,
+  &__contact {
+    margin-bottom: 40px;
+  }
+
+  &__services-title,
+  &__process-title,
+  &__contact-title {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+
+  &__services-text,
+  &__process-text,
+  &__contact-text {
+    font-size: 1em;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 15px;
+  }
+
+  &__services-list {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  &__services-list li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  &__services-list li:before {
+    content: "•";
+    color: #e0a800;
+    position: absolute;
+    left: 0;
+  }
+
+  &__process-steps {
+    list-style: decimal;
+    padding-left: 20px;
+    max-width: 800px;
+    margin: 0 auto 15px;
+    text-align: left;
+  }
+
+  &__contact-details {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  &__contact-button {
+    background: #e0a800;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+  }
+}

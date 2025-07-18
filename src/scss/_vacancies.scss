@@ -1,0 +1,84 @@
+// Вакансии
+.vacancies {
+  &__container {
+    padding: 2rem 1rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media (min-width: 768px) {
+      width: 30%;
+    }
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+
+    &-btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background-color: #f5f5f5;
+      border: none;
+      border-radius: 0.5rem;
+      text-align: left;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover,
+      &--active {
+        background-color: #0055aa;
+        color: #ffffff;
+      }
+    }
+
+    &-name {
+      font-weight: 600;
+    }
+
+    &-meta {
+      font-size: 0.875rem;
+      margin-left: 0.5rem;
+      white-space: nowrap;
+    }
+  }
+
+  &__details {
+    flex: 1;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 0.5rem;
+    min-height: 200px;
+
+    &-placeholder {
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+}
