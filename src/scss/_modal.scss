@@ -1,0 +1,88 @@
+/* src/scss/_modal.scss */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  /* спрятано по‑умолчанию */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 50;
+
+  &--open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+  }
+
+  &__dialog {
+    position: relative;
+    background: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    /* изначально чуть уменьшен и приподнят */
+    transform: translateY(-20px) scale(0.9);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    /* адаптивные размеры */
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+
+    @media (min-width: 768px) {
+      width: 80%;
+      max-width: 600px;
+      padding: 0;
+    }
+    @media (max-width: 767px) {
+      width: 95%;
+      max-width: none;
+      margin: 1rem;
+    }
+  }
+
+  /* при открытии плавно возвращаем нормальный размер и плывём fade‑in */
+  &--open &__dialog {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s;
+    z-index: 10;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  &__content {
+    /* внутренние отступы */
+    padding: 1.5rem;
+
+    @media (min-width: 768px) {
+      padding: 2rem;
+    }
+  }
+}

@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Вставляем HTML шапки
   placeholder.innerHTML = headerTpl;
 
+  const header = document.querySelector('.header');
   const burger = document.querySelector('.header__burger');
   const nav = document.querySelector('.header__nav');
   const closeBtn = document.querySelector('.header__nav-close');
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     news: [
     ],
     contacts: [
-      { text: 'Наш офіс', href: '/contacts' },
+      { text: 'Наш офіс', href: './../pages/contacts' },
       { text: 'Вакансії', href: './../pages/vacancies' }
     ],
     lang: [
@@ -71,6 +72,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.header__submenu-wrapper--desktop').classList.add('is-open');
         item.classList.add('is-active');
       });
+    }
+  });
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      header.classList.add('is-sticky');
+    } else {
+      header.classList.remove('is-sticky');
     }
   });
 

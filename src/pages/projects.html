@@ -5,61 +5,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ESG Construction - Проекты</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./../scss/main.scss">
 </head>
 
 <body>
   <header-placeholder></header-placeholder>
 
-
-  <main class="projects">
-    <h1 class="projects__title">Проекти</h1>
-    <div class="projects__filters">
-      <button class="projects__filter">Всі</button>
-      <button class="projects__filter">Будівництво</button>
-      <button class="projects__filter">Ремонт</button>
-    </div>
-    <div class="projects__grid">
-      <div class="project-card">
-        <img src="project1.jpg" alt="Проект 1" class="project-card__image">
-        <div class="project-card__content">
-          <span class="project-card__category">Будівництво</span>
-          <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-        </div>
+  <main class="projects main-content">
+    <div class="container">
+      <h1 class="projects__title page-title">Проекти</h1>
+      <div class="projects__filters">
+        <button class="projects__filter active">Всі</button>
+        <button class="projects__filter">Будівництво</button>
+        <button class="projects__filter">Ремонт</button>
       </div>
-      <div class="project-card">
-        <img src="project2.jpg" alt="Проект 2" class="project-card__image">
-        <div class="project-card__content">
-          <span class="project-card__category">Ремонт</span>
-          <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+      <div class="projects__grid">
+        <div class="project-card">
+          <img src="project1.jpg" alt="Проект 1" class="project-card__image">
+          <div class="project-card__content">
+            <span class="project-card__category">Будівництво</span>
+            <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+          </div>
         </div>
-      </div>
-      <div class="project-card">
-        <img src="project3.jpg" alt="Проект 3" class="project-card__image">
-        <div class="project-card__content">
-          <span class="project-card__category">Будівництво</span>
-          <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+        <div class="project-card">
+          <img src="project2.jpg" alt="Проект 2" class="project-card__image">
+          <div class="project-card__content">
+            <span class="project-card__category">Ремонт</span>
+            <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+          </div>
         </div>
-      </div>
-      <div class="project-card">
-        <img src="project4.jpg" alt="Проект 4" class="project-card__image">
-        <div class="project-card__content">
-          <span class="project-card__category">Ремонт</span>
-          <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+        <div class="project-card">
+          <img src="project3.jpg" alt="Проект 3" class="project-card__image">
+          <div class="project-card__content">
+            <span class="project-card__category">Будівництво</span>
+            <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+          </div>
         </div>
-      </div>
-      <div class="project-card">
-        <img src="project5.jpg" alt="Проект 5" class="project-card__image">
-        <div class="project-card__content">
-          <span class="project-card__category">Будівництво</span>
-          <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+        <div class="project-card">
+          <img src="project4.jpg" alt="Проект 4" class="project-card__image">
+          <div class="project-card__content">
+            <span class="project-card__category">Ремонт</span>
+            <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+          </div>
         </div>
-      </div>
-      <div class="project-card">
-        <img src="project6.jpg" alt="Проект 6" class="project-card__image">
-        <div class="project-card__content">
-          <span class="project-card__category">Ремонт</span>
-          <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+        <div class="project-card">
+          <img src="project5.jpg" alt="Проект 5" class="project-card__image">
+          <div class="project-card__content">
+            <span class="project-card__category">Будівництво</span>
+            <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="project6.jpg" alt="Проект 6" class="project-card__image">
+          <div class="project-card__content">
+            <span class="project-card__category">Ремонт</span>
+            <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -67,6 +69,9 @@
 
 
   <footer-placeholder></footer-placeholder>
+
+  <script type="module" src="./../js/index.js"></script>
+  <script type="module" src="./../js/smooth-scroll.js"></script>
   <script type="module" src="./../js/includeHeader.js"></script>
   <script type="module" src="./../js/includeFooter.js"></script>
 </body>

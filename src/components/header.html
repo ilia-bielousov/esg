@@ -6,13 +6,23 @@
 
     <!-- Бургер (мобильный) -->
     <button class="header__burger" aria-label="Открыть меню">
-      <span></span><span></span><span></span>
+      <i class="bi bi-list"></i>
     </button>
 
     <!-- Десктоп‑навигация -->
     <nav class="header__nav header__nav--primary">
       <!-- Кнопка‑крестик (мобильная) -->
-      <button class="header__nav-close" aria-label="Закрыть меню">&times;</button>
+      <div class="header__nav-btns">
+        <button data-modal-template="contact-us" class="header__call-menu" aria-label="Заказать звонок">
+          <!-- замените на свой SVG‑айкон телефона -->
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#fff"
+              d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.36 11.36 0 003.55.57 1 1 0 011 1v3.5a1 1 0 01-1 1A17.48 17.48 0 013.5 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.21 1.11l-2.2 2.2z" />
+          </svg>
+        </button>
+        <button class="header__nav-close" aria-label="Закрыть меню">&times;</button>
+      </div>
+
 
       <ul class="header__menu">
         <li class="header__menu-item" data-sub="company">
@@ -20,10 +30,10 @@
           <span class="caret"></span>
           <ul class="header__submenu-list header__submenu-list--mobile"></ul>
         </li>
-        <li class="header__menu-item" data-sub="projects">
+        <li class="header__menu-item">
           <a href="./../pages/projects.html" class="header__menu-link">Проекты</a>
         </li>
-        <li class="header__menu-item" data-sub="news">
+        <li class="header__menu-item">
           <a href="./../pages/blog.html" class="header__menu-link">Наш блог</a>
         </li>
         <li class="header__menu-item" data-sub="contacts">
@@ -47,14 +57,14 @@
       </ul>
     </nav>
 
-    <a href="tel:+123456789" class="header__call" aria-label="Заказать звонок">
+    <button data-modal-template="contact-us" class="header__call" aria-label="Заказать звонок">
       <!-- замените на свой SVG‑айкон телефона -->
       <svg width="24" height="24" viewBox="0 0 24 24">
         <path fill="#fff"
           d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.36 11.36 0 003.55.57 1 1 0 011 1v3.5a1 1 0 01-1 1A17.48 17.48 0 013.5 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.21 1.11l-2.2 2.2z" />
       </svg>
       <span class="header__call-text">Заказать звонок</span>
-    </a>
+    </button>
 
     <!-- Второй ряд (десктоп) -->
     <div class="header__submenu-wrapper header__submenu-wrapper--desktop">
@@ -63,3 +73,8 @@
       </div>
     </div>
 </header>
+
+<template id="contact-us">
+  <h2>Форма обратной связи</h2>
+  <form>…ваша форма…</form>
+</template>

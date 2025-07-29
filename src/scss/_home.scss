@@ -2,14 +2,21 @@
 .home {
   &__hero {
     position: relative;
-    height: 600px;
+    height: 100vh;
 
     &-bg {
       position: absolute;
       inset: 0;
-      background: url("/assets/images/hero.jpg") center/cover no-repeat;
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("../assets/images/3.jpg") center/cover no-repeat;
       z-index: 0;
     }
+
+    &-title {
+      font-size: 4.5rem;
+      margin-bottom: 1rem;
+    }
+
     &-content {
       position: relative;
       z-index: 1;
@@ -21,13 +28,9 @@
       color: #fff;
 
       & > * {
-        max-width: 600px;
+        max-width: 700px;
       }
 
-      &-title {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-      }
       &-text {
         line-height: 1.4;
       }
@@ -54,7 +57,7 @@
         transition: background 0.2s;
 
         &:hover {
-          background: darken(#ffc107, 5%);
+          // background: darken(#ffc107, 5%);
         }
       }
     }
@@ -117,38 +120,80 @@
       gap: 0.5rem;
       list-style: none;
       margin-bottom: 2rem;
-
-      .home__projects-filter {
-        padding: 0.5rem 1rem;
-        border: 1px solid #ddd;
-        border-radius: 1rem;
-        background: transparent;
-        cursor: pointer;
-        transition: background 0.2s, color 0.2s;
-
-        &--active {
-          background: #ffc107;
-          color: #fff;
-          border-color: #ffc107;
-        }
-      }
     }
 
     &-list {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
+      grid-template-columns: repeat(3, 1fr);
+
+      @media (max-width: 991px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+      }
     }
+
     &-item {
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      /* убираем прежний aspect-ratio */
+      /* задаём небольшую тень или фон, если нужно */
+    }
+
+    &-media {
+      width: 100%;
+      /* вот тут фиксируем пропорцию */
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border-radius: 0.5rem;
+      background: #f0f0f0;
+
       img {
         width: 100%;
-        border-radius: 0.5rem;
+        height: 100%;
+        object-fit: cover;
         display: block;
       }
     }
+
     &-name {
-      margin-top: 0.5rem;
+      margin-top: 0.75rem;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    &-item {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border-radius: 0.5rem;
+      padding: 10px 20px;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          transform: translateY(-5px);
+        }
+      }
+
+      img {
+        /* растянуть на весь контейнер */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
+    &-name {
+      margin-top: 0.75rem;
+      text-align: center;
       font-weight: 500;
     }
   }
@@ -202,7 +247,7 @@
   }
 
   // адаптив
-  @media (max-width: 767px) {
+  @media (max-width: $breakpoint-md) {
     &__hero {
       height: 400px;
       &-content {

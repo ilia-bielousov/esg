@@ -6,6 +6,7 @@
   <meta charset="UTF-8" />
   <title>Главная | ESG Construction</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./../scss/main.scss" />
 </head>
 
@@ -18,7 +19,7 @@
     <section class="home__hero">
       <div class="home__hero-bg"></div>
       <div class="container home__hero-content">
-        <h1 class="home__hero-title">ESG Construction</h1>
+        <h1 class="home__hero-title">ESG Construction</h1>
         <p class="home__hero-text">
           This is a team of professionals with many years of experience in construction and design.
           We position ourselves not just as a construction company, but as a group of companies,
@@ -74,36 +75,24 @@
     <section class="home__projects">
       <div class="container">
         <h2 class="home__projects-title">Our Projects</h2>
-        <ul class="home__projects-filters">
-          <li><button class="home__projects-filter home__projects-filter--active" data-filter="all">All</button></li>
-          <li><button class="home__projects-filter" data-filter="building">Building</button></li>
-          <li><button class="home__projects-filter" data-filter="ready">Ready</button></li>
-          <li><button class="home__projects-filter" data-filter="planned">Planned</button></li>
-        </ul>
         <ul class="home__projects-list">
           <li class="home__projects-item">
-            <img src="/assets/images/proj1.jpg" alt="Beloostrov Nordic" />
+            <div class="home__projects-media">
+              <img src="./../assets/images/1.jpg" alt="Beloostrov Nordic" />
+            </div>
             <h3 class="home__projects-name">Beloostrov Nordic</h3>
           </li>
           <li class="home__projects-item">
-            <img src="/assets/images/proj2.jpg" alt="Zelenogorsk Half-timbered" />
-            <h3 class="home__projects-name">Zelenogorsk Half‑timbered</h3>
+            <div class="home__projects-media">
+              <img src="./../assets/images/5.jpg" alt="Beloostrov Nordic" />
+            </div>
+            <h3 class="home__projects-name">Beloostrov Nordic</h3>
           </li>
           <li class="home__projects-item">
-            <img src="/assets/images/proj3.jpg" alt="Brus Sea Fortress" />
-            <h3 class="home__projects-name">Brus Sea Fortress</h3>
-          </li>
-          <li class="home__projects-item">
-            <img src="/assets/images/proj4.jpg" alt="Sestroretsk Nordic" />
-            <h3 class="home__projects-name">Sestroretsk Nordic</h3>
-          </li>
-          <li class="home__projects-item">
-            <img src="/assets/images/proj5.jpg" alt="Lada Granta Park" />
-            <h3 class="home__projects-name">Lada Granta Park</h3>
-          </li>
-          <li class="home__projects-item">
-            <img src="/assets/images/proj6.jpg" alt="Burisa De Canion" />
-            <h3 class="home__projects-name">Burisa De Canion</h3>
+            <div class="home__projects-media">
+              <img src="./../assets/images/6.jpg" alt="Beloostrov Nordic" />
+            </div>
+            <h3 class="home__projects-name">Beloostrov Nordic</h3>
           </li>
         </ul>
       </div>
@@ -119,10 +108,7 @@
             Learn about our services and security, as well as our effective management
             of profitable properties.
           </p>
-          <a href="/services.html" class="home__promo-btn">See more ›</a>
-        </div>
-        <div class="home__promo-media">
-          <img src="/assets/images/logo.svg" alt="ESG Construction Logo" />
+          <a href="./../pages/services.html" class="home__promo-btn">See more ›</a>
         </div>
       </div>
     </section>
@@ -131,6 +117,8 @@
   <!-- Footer -->
   <footer-placeholder></footer-placeholder>
 
+  <script type="module" src="./../js/index.js"></script>
+  <script type="module" src="./../js/smooth-scroll.js"></script>
   <script type="module" src="./../js/includeHeader.js"></script>
   <script type="module" src="./../js/includeFooter.js"></script>
 </body>

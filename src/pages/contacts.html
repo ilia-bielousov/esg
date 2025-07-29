@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Контакты | ESG Construction</title>
   <!-- Основные стили -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./../scss/main.scss" />
 </head>
 
@@ -15,12 +16,12 @@
   <header-placeholder></header-placeholder>
   <!-- включается компонент header.html -->
 
-  <main class="contacts">
+  <main class="main-content contacts">
     <div class="container contacts__container">
       <h1 class="contacts__title">Контакты</h1>
       <!-- Department tabs -->
       <div class="contacts__tabs">
-        <button class="contacts__tab contacts__tab--active" data-dept="construction">Строительный отдел</button>
+        <button class="contacts__tab contacts__tab--active" data-dept="construction">Будівельний відділ</button>
         <button class="contacts__tab" data-dept="design">Проектный отдел</button>
         <button class="contacts__tab" data-dept="sales">Отдел продаж</button>
       </div>
@@ -102,6 +103,10 @@
 
   <footer-placeholder></footer-placeholder>
 
+
+
+  <script type="module" src="./../js/index.js"></script>
+  <script type="module" src="./../js/smooth-scroll.js"></script>
   <script type="module" src="./../js/includeHeader.js"></script>
   <script type="module" src="./../js/includeFooter.js"></script>
   <script type="module" src="./../js/contacts.js"></script>

@@ -1,22 +1,33 @@
 .projects {
-  padding: 20px;
-  text-align: center;
-
   &__title {
-    font-size: 2.5em;
     margin-bottom: 20px;
   }
 
   &__filters {
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    margin-bottom: 25px;
 
     .projects__filter {
-      background: #f5e8c7;
-      border: none;
-      padding: 5px 15px;
-      border-radius: 15px;
-      margin: 0 5px;
+      padding: 10px 20px;
+      border: 1px solid #d4b48c;
+      border-radius: 50px;
+      background-color: #fff;
+      transition: all 0.3s ease;
       cursor: pointer;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: #d4b48c;
+          color: #fff;
+        }
+      }
+
+      &.active {
+        background-color: #d4b48c;
+        color: #fff;
+      }
     }
   }
 
