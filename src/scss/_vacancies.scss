@@ -67,10 +67,16 @@
       cursor: pointer;
       transition: background-color 0.2s;
 
-      &:hover,
       &--active {
-        background-color: #0055aa;
+        background-color: #d4b48c;
         color: #ffffff;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: #d4b48c;
+          color: #ffffff;
+        }
       }
     }
 

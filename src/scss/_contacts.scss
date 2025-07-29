@@ -133,16 +133,25 @@
     .contacts__submit {
       width: fit-content;
       padding: 0.5rem 1.5rem;
-      border: 1px solid #000;
+      border: 1px solid #d4b48c;
       border-radius: 2rem;
       background: transparent;
       cursor: pointer;
       transition: background 0.2s, color 0.2s;
 
-      &:hover {
-        background: #000;
-        color: #fff;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: #d4b48c;
+          color: #ffffff;
+        }
       }
+
+      &:active {
+        background-color: #b8976f;
+        color: #fff;
+        transform: scale(0.98);
+      }
+      //
     }
   }
 

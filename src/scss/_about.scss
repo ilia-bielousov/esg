@@ -189,6 +189,135 @@
     font-size: 0.95rem;
   }
 
+  &__sponsors {
+    margin-top: 3rem;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+  }
+
+  &__sponsors {
+    margin-top: 3rem;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+  }
+
+  &__sponsors {
+    margin-top: 3rem;
+    padding: 0 1rem;
+
+    &-list {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+  }
+
+  &__sponsors {
+    // background: linear-gradient(to bottom, #fffaf4, #f9f6f1);
+    padding: 4rem 1rem;
+    border-radius: 1rem;
+
+    &-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #2c2c2c;
+      margin-bottom: 3rem;
+    }
+
+    &-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &-card {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background-color: #fff;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+      text-decoration: none;
+      color: #2c2c2c;
+      transition: transform 0.3s, box-shadow 0.3s;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      &-blue {
+        background: linear-gradient(to right, #e0f1ff, #ffffff);
+      }
+
+      &-green {
+        background: linear-gradient(to right, #e8fbe6, #ffffff);
+      }
+
+      &-orange {
+        background: linear-gradient(to right, #fff2e0, #ffffff);
+      }
+
+      &-purple {
+        background: linear-gradient(to right, #f0e8ff, #ffffff);
+      }
+    }
+
+    &-image {
+      flex-shrink: 0;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    &-content {
+      flex: 1;
+    }
+
+    &-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    &-desc {
+      font-size: 0.95rem;
+      color: #5e5e5e;
+      line-height: 1.5;
+    }
+  }
+
   &__cta {
     background-color: #f9f6f1;
     padding: 2.5rem 1rem;
