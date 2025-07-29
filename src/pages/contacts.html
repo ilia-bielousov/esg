@@ -18,75 +18,104 @@
 
   <main class="main-content contacts">
     <div class="container contacts__container">
-      <h1 class="contacts__title">Контакты</h1>
-      <!-- Department tabs -->
+      <!-- Заголовок страницы и вступление -->
+      <h1 class="contacts__title page-title">Контакты</h1>
+      <p class="contacts__subtitle">
+        Мы всегда на связи и готовы помочь вам на любом этапе — от консультации до сопровождения сделки.
+      </p>
+      <hr class="contacts__divider" />
+
       <div class="contacts__tabs">
         <button class="contacts__tab contacts__tab--active" data-dept="construction">Будівельний відділ</button>
         <button class="contacts__tab" data-dept="design">Проектный отдел</button>
         <button class="contacts__tab" data-dept="sales">Отдел продаж</button>
       </div>
-      <hr class="contacts__divider" />
+
       <!-- Content area -->
-      <div class="contacts__content">
+      <div class="contacts__panes">
+        <!-- Будівельний відділ -->
         <div class="contacts__pane contacts__pane--active" data-dept-content="construction">
-          <h2 class="contacts__subtitle">Строительный отдел</h2>
-          <p class="contacts__desc">
-            Наш строительный отдел выполняет полный цикл работ: от закладки фундамента
-            до финишной отделки. Мы используем современные технологии и гарантируем
-            качество на каждом этапе.
-          </p>
-          <p class="contacts__desc">
-            Оставьте заявку в форме ниже, и наш менеджер свяжется с вами в течение 24 часов
-            для уточнения всех деталей.
-          </p>
-          <form class="contacts__form">
-            <input type="text" name="name" placeholder="ФИО" required />
-            <input type="text" name="company" placeholder="Название компании" />
-            <input type="email" name="email" placeholder="Email" required />
-            <input type="tel" name="phone" placeholder="Телефон" />
-            <textarea name="message" rows="4" placeholder="Ваше сообщение"></textarea>
-            <button type="submit" class="contacts__submit">Отправить</button>
-          </form>
+          <div class="contacts__pane-inner">
+            <div class="contacts__info">
+              <h2 class="contacts__subtitle">Строительный отдел</h2>
+              <p class="contacts__desc">
+                Наш строительный отдел выполняет полный цикл работ: от закладки фундамента
+                до финишной отделки. Мы используем современные технологии и гарантируем
+                качество на каждом этапе.
+              </p>
+              <p class="contacts__desc">
+                Оставьте заявку в форме ниже, и наш менеджер свяжется с вами в течение 24 часов
+                для уточнения всех деталей.
+              </p>
+            </div>
+
+            <div class="contacts__form-wrapper">
+              <form class="contacts__form">
+                <input type="text" name="name" placeholder="ФИО" required />
+                <input type="text" name="company" placeholder="Название компании" />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="tel" name="phone" placeholder="Телефон" />
+                <textarea name="message" rows="4" placeholder="Ваше сообщение"></textarea>
+                <button type="submit" class="contacts__submit">Отправить</button>
+              </form>
+            </div>
+          </div>
         </div>
 
+        <!-- Проектный отдел -->
         <div class="contacts__pane" data-dept-content="design">
-          <h2 class="contacts__subtitle">Проектный отдел</h2>
-          <p class="contacts__desc">
-            Наши архитекторы и инженеры создают проекты жилой, коммерческой и
-            промышленной недвижимости. Мы учитываем все ваши пожелания и нормы
-            энергоэффективности.
-          </p>
-          <p class="contacts__desc">
-            Расскажите нам о ваших требованиях в форме — и мы подготовим
-            предварительную концепцию и смету в течение 3 рабочих дней.
-          </p>
-          <form class="contacts__form">
-            <input type="text" name="name" placeholder="ФИО" required />
-            <input type="text" name="projectName" placeholder="Название проекта" />
-            <input type="email" name="email" placeholder="Email" required />
-            <textarea name="specs" rows="4" placeholder="Технические требования"></textarea>
-            <button type="submit" class="contacts__submit">Отправить</button>
-          </form>
+          <div class="contacts__pane-inner">
+            <div class="contacts__info">
+              <h2 class="contacts__subtitle">Проектный отдел</h2>
+              <p class="contacts__desc">
+                Наши архитекторы разрабатывают индивидуальные проекты жилых и коммерческих объектов,
+                учитывая современные стандарты, пожелания клиента и особенности участка.
+              </p>
+              <p class="contacts__desc">
+                Заполните форму, чтобы мы подготовили предварительную концепцию и коммерческое предложение.
+                Срок подготовки — до 3 рабочих дней.
+              </p>
+            </div>
+
+            <div class="contacts__form-wrapper">
+              <form class="contacts__form">
+                <input type="text" name="name" placeholder="ФИО" required />
+                <input type="text" name="projectName" placeholder="Название проекта" />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="tel" name="phone" placeholder="Телефон" />
+                <textarea name="specs" rows="4" placeholder="Технические требования или пожелания"></textarea>
+                <button type="submit" class="contacts__submit">Отправить</button>
+              </form>
+            </div>
+          </div>
         </div>
 
+        <!-- Отдел продаж -->
         <div class="contacts__pane" data-dept-content="sales">
-          <h2 class="contacts__subtitle">Отдел продаж</h2>
-          <p class="contacts__desc">
-            Наш отдел продаж предоставляет актуальные прайс‑листы на материалы и услуги.
-            Работая напрямую с заводами‑изготовителями, мы можем предложить вам лучшие
-            условия.
-          </p>
-          <p class="contacts__desc">
-            Укажите в форме необходимые позиции и их количество — и вы получите
-            персональное коммерческое предложение в течение 12 часов.
-          </p>
-          <form class="contacts__form">
-            <input type="text" name="name" placeholder="ФИО" required />
-            <input type="text" name="items" placeholder="Наименование товара" />
-            <input type="email" name="email" placeholder="Email" required />
-            <textarea name="details" rows="4" placeholder="Детали запроса"></textarea>
-            <button type="submit" class="contacts__submit">Отправить</button>
-          </form>
+          <div class="contacts__pane-inner">
+            <div class="contacts__info">
+              <h2 class="contacts__subtitle">Отдел продаж</h2>
+              <p class="contacts__desc">
+                Мы предлагаем широкий ассортимент строительных и отделочных материалов напрямую от производителей.
+                Наши менеджеры помогут вам подобрать оптимальные позиции под ваш бюджет и задачи.
+              </p>
+              <p class="contacts__desc">
+                Укажите в форме необходимые товары и их количество — и вы получите персональное коммерческое
+                предложение в течение 12 часов.
+              </p>
+            </div>
+
+            <div class="contacts__form-wrapper">
+              <form class="contacts__form">
+                <input type="text" name="name" placeholder="ФИО" required />
+                <input type="text" name="items" placeholder="Необходимые товары или услуги" />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="tel" name="phone" placeholder="Телефон" />
+                <textarea name="details" rows="4" placeholder="Комментарий или уточнение"></textarea>
+                <button type="submit" class="contacts__submit">Отправить</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
 

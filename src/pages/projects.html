@@ -16,54 +16,75 @@
     <div class="container">
       <h1 class="projects__title page-title">Проекти</h1>
       <div class="projects__filters">
-        <button class="projects__filter active">Всі</button>
-        <button class="projects__filter">Будівництво</button>
-        <button class="projects__filter">Ремонт</button>
+        <button class="projects__filter active" data-filter="all">Всі</button>
+        <button class="projects__filter" data-filter="construction">Будівництво</button>
+        <button class="projects__filter" data-filter="repair">Ремонт</button>
       </div>
-      <div class="projects__grid">
-        <div class="project-card">
-          <img src="project1.jpg" alt="Проект 1" class="project-card__image">
-          <div class="project-card__content">
-            <span class="project-card__category">Будівництво</span>
-            <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-          </div>
+      <div class="projects-grid">
+        <div class="project-card" data-category="construction">
+          <a href="#" class="project-link">
+            <span class="card-tag">Будівництво</span>
+            <h3 class="card-title">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</h3>
+            <div class="card-image-wrapper">
+              <img src="./../assets/images/1.jpg" alt="First DELUXE-CLASS Residences in Kozin">
+            </div>
+          </a>
         </div>
-        <div class="project-card">
-          <img src="project2.jpg" alt="Проект 2" class="project-card__image">
-          <div class="project-card__content">
-            <span class="project-card__category">Ремонт</span>
-            <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-          </div>
+
+        <div class="project-card" data-category="repair">
+          <a href="#" class="project-link">
+            <span class="card-tag">Ремонт</span>
+            <h3 class="card-title">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</h3>
+            <div class="card-image-wrapper">
+              <img src="./../assets/images/3.jpg" alt="First DELUXE-CLASS Residences in Kozin">
+            </div>
+          </a>
         </div>
-        <div class="project-card">
-          <img src="project3.jpg" alt="Проект 3" class="project-card__image">
-          <div class="project-card__content">
-            <span class="project-card__category">Будівництво</span>
-            <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-          </div>
+
+        <div class="project-card" data-category="repair">
+          <a href="#" class="project-link">
+            <span class="card-tag">Ремонт</span>
+            <h3 class="card-title">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</h3>
+            <div class="card-image-wrapper">
+              <img src="./../assets/images/6.jpg" alt="First DELUXE-CLASS Residences in Kozin">
+            </div>
+          </a>
         </div>
-        <div class="project-card">
-          <img src="project4.jpg" alt="Проект 4" class="project-card__image">
-          <div class="project-card__content">
-            <span class="project-card__category">Ремонт</span>
-            <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-          </div>
+
+        <div class="project-card" data-category="construction">
+          <a href="#" class="project-link">
+            <span class="card-tag">Будівництво</span>
+            <h3 class="card-title">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</h3>
+            <div class="card-image-wrapper">
+              <img src="./../assets/images/7.jpg" alt="First DELUXE-CLASS Residences in Kozin">
+            </div>
+          </a>
         </div>
-        <div class="project-card">
-          <img src="project5.jpg" alt="Проект 5" class="project-card__image">
-          <div class="project-card__content">
-            <span class="project-card__category">Будівництво</span>
-            <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-          </div>
+
+        <div class="project-card" data-category="construction">
+          <a href="#" class="project-link">
+            <span class="card-tag">Будівництво</span>
+            <h3 class="card-title">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</h3>
+            <div class="card-image-wrapper">
+              <img src="./../assets/images/2.webp" alt="First DELUXE-CLASS Residences in Kozin">
+            </div>
+          </a>
         </div>
-        <div class="project-card">
-          <img src="project6.jpg" alt="Проект 6" class="project-card__image">
-          <div class="project-card__content">
-            <span class="project-card__category">Ремонт</span>
-            <p class="project-card__text">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-          </div>
+
+        <div class="project-card" data-category="construction">
+          <a href="#" class="project-link">
+            <span class="card-tag">Будівництво</span>
+            <h3 class="card-title">Lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit.</h3>
+            <div class="card-image-wrapper">
+              <img src="./../assets/images/3.jpg" alt="First DELUXE-CLASS Residences in Kozin">
+            </div>
+          </a>
         </div>
+
+        <!-- и так далее для остальных карточек -->
       </div>
+
+
     </div>
   </main>
 
@@ -71,6 +92,7 @@
   <footer-placeholder></footer-placeholder>
 
   <script type="module" src="./../js/index.js"></script>
+  <script type="module" src="./../js/projects-filter.js"></script>
   <script type="module" src="./../js/smooth-scroll.js"></script>
   <script type="module" src="./../js/includeHeader.js"></script>
   <script type="module" src="./../js/includeFooter.js"></script>

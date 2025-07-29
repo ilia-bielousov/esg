@@ -1,10 +1,9 @@
 .invest {
   &__container {
-    padding: 2rem 1rem;
+    padding: 0rem 0rem 1rem;
   }
 
   &__title {
-    font-size: 2rem;
     margin-bottom: 0.5rem;
   }
 
@@ -29,37 +28,21 @@
 
     @media (min-width: 768px) {
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start; // более логично для текста
     }
 
     &-text {
       flex: 1;
+      max-width: 800px;
+
       p {
         color: #625c54;
         line-height: 1.6;
       }
     }
+
     &-aside {
       flex: 1;
-      text-align: left;
-
-      &-heading {
-        font-size: 1.375rem;
-        margin-bottom: 1rem;
-      }
-      &-btn {
-        display: inline-block;
-        padding: 0.75rem 1.5rem;
-        border: 1px solid #000;
-        border-radius: 0.5rem;
-        text-decoration: none;
-        transition: background 0.2s, color 0.2s;
-
-        &:hover {
-          background: #000;
-          color: #fff;
-        }
-      }
     }
   }
 
@@ -117,24 +100,38 @@
       justify-content: center;
       gap: 3rem;
     }
+  }
 
-    &-link {
-      display: inline-flex;
-      align-items: center;
-      font-size: 1.125rem;
-      color: #000;
-      text-decoration: none;
-      transition: color 0.2s;
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.125rem;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #c0a97b;
+    border-radius: 2rem;
+    background-color: #fff;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 
+    @media (hover: hover) and (pointer: fine) {
       &:hover {
-        color: #0055aa;
+        background-color: #d4b48c;
+        color: #fff;
+        border-color: #d4b48c;
+
+        .invest__link-icon {
+          transform: translateX(4px);
+        }
       }
     }
+  }
 
-    &-icon {
-      margin-left: 0.5rem;
-      font-size: 1.5rem;
-      line-height: 1;
-    }
+  &__link-icon {
+    margin-left: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
   }
 }

@@ -2,20 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.contacts__tab');
   const panes = document.querySelectorAll('.contacts__pane');
 
-  function activateTab(dept) {
-    tabs.forEach(tab =>
-      tab.classList.toggle('contacts__tab--active', tab.dataset.dept === dept)
-    );
-    panes.forEach(pane =>
-      pane.classList.toggle('contacts__pane--active', pane.dataset.deptContent === dept)
-    );
-  }
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.dept;
 
-  // Инициализация
-  const first = tabs[0].dataset.dept;
-  activateTab(first);
+      // Активная вкладка
+      tabs.forEach(t => t.classList.toggle('contacts__tab--active', t === tab));
 
-  tabs.forEach(tab =>
-    tab.addEventListener('click', () => activateTab(tab.dataset.dept))
-  );
+      // Показываем соответствующую панель
+      panes.forEach(pane => {
+        const match = pane.dataset.deptContent === target;
+        pane.classList.toggle('contacts__pane--active', match);
+      });
+    });
+  });
 });

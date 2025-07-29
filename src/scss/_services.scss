@@ -1,6 +1,6 @@
 .services {
   &__container {
-    padding: 2rem 1rem;
+    padding: 0rem 0rem 1rem;
   }
 
   &__title {
@@ -127,6 +127,44 @@
       width: 100%;
       border-radius: 0.5rem;
       display: block;
+    }
+  }
+
+  &__cta {
+    background-color: #f9f6f1;
+    padding: 2.5rem 1rem;
+    margin-top: 3rem;
+    text-align: center;
+    border-radius: 0.75rem;
+
+    &-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    &-text {
+      font-size: 1.25rem;
+      color: #2c2c2c;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    &-btn {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      background-color: #fff;
+      border: 1px solid #d4b48c;
+      border-radius: 2rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: #d4b48c;
+          color: #fff;
+        }
+      }
     }
   }
 }
