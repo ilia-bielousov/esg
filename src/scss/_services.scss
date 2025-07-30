@@ -140,6 +140,11 @@
       text-decoration: none;
       transition: background-color 0.3s ease, color 0.3s ease;
 
+      &:active {
+        background-color: #b8976f;
+        transform: scale(0.98);
+      }
+
       @media (hover: hover) and (pointer: fine) {
         &:hover {
           background-color: #d4b48c;

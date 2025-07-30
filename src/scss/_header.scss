@@ -48,6 +48,12 @@
     outline: none;
     border: none;
     cursor: pointer;
+    transition: 0.3s easy;
+
+    &:active {
+      background-color: #30408a;
+      transform: scale(0.98);
+    }
 
     svg {
       flex-shrink: 0;
@@ -231,7 +237,20 @@
         color: #333;
         text-decoration: none;
         transition: background 0.2s;
-        font-size: 22px;
+        font-size: 1.25rem; // базово ≈ 20px
+
+        @media (max-width: 480px) {
+          font-size: 1rem; // ~16px на очень малых
+        }
+
+        @media (min-width: 768px) {
+          font-size: 1.125rem; // ~18px на планшетах
+        }
+
+        @media (min-width: 1200px) {
+          font-size: 1.25rem; // ~20px на больших
+        }
+
         &:hover {
           background: #f5f5f5;
         }

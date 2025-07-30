@@ -115,6 +115,11 @@
     background-color: #fff;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 
+    &:active {
+      background-color: #b8976f;
+      transform: scale(0.98);
+    }
+
     @media (hover: hover) and (pointer: fine) {
       &:hover {
         background-color: #d4b48c;
